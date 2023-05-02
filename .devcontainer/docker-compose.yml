@@ -1,0 +1,21 @@
+version: '3'
+services:
+  quiz_app:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/quiz_development
+    # command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    # restart: always
+    tty: true
+    stdin_open: true
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: quiz_development
+    # restart: always

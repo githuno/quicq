@@ -1,0 +1,24 @@
+{
+    "name": "Ruby on Rails",
+    "forwardPorts": [3000],
+    "customizations": {
+        "vscode":{
+            "settings": {},
+			"extensions": [
+                "rebornix.ruby",
+                "vscodevim.vim",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
+            ]
+        }   
+    },
+    "postCreateCommand": "bundle install",
+    "service": "quiz_app",
+    "workspaceFolder": "/app/quiz_app",
+    "shutdownAction": "stopCompose",
+    "dockerComposeFile": "docker-compose.yml"
+    // "remoteUser": "vscode",
+    // "remoteEnv": {
+    //     "USER": "vscode"
+    // }
+}

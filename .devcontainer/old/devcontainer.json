@@ -1,0 +1,34 @@
+{
+	"name": "ruby",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "quicq"
+	// "remoteUser": "vscode",
+	// "build": {"dockerfile": "Dockerfile"},
+    // "runArgs": [ "-it","-v","/home/ryo/Containers/Ruby/sonic:/sonic"],
+	// "runArgs": [ "-it", "--no-cache"],
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Configure tool-specific properties.
+	// "customizations": {
+	// 	// Configure properties specific to VS Code.
+	// 	"vscode": {
+	// 		"settings": {},
+	// 		"extensions": [
+	// 			"streetsidesoftware.code-spell-checker",
+	// 			"MS-CEINTL.vscode-language-pack-ja",
+	// 			"ms-vscode.cpptools-extension-pack"
+	// 		]
+	// 	}
+	// }
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "gcc -v",
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

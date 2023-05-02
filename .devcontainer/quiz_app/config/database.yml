@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  encoding: unicode
+  username: postgres
+  password: postgres
+  host: db
+  port: 5432
+
+development:
+  <<: *default
+  database: quiz_development
+
+test:
+  <<: *default
+  database: quiz_test
+
+production:
+  <<: *default
+  database: quiz_development
+  url: <%= ENV['DATABASE_URL'] %>

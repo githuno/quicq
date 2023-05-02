@@ -1,0 +1,3 @@
+testAdmin:
+  email: testAdmin@example.com
+  password_digest: <%= Admin.digest('password') %>

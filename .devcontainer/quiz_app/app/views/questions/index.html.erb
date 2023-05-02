@@ -1,0 +1,26 @@
+<%= render 'layouts/flash_messages' %>
+<div class="row z-depth-1 start-card">
+  <div class="admin-question-title-wrap mb-1">
+    <p class="bold admin-title">問題一覧</p>
+    <%= link_to "問題を作成", new_question_path, class: 'waves-effect waves-light btn' %>
+  </div>
+  <div class="col s12">
+    <%= paginate @questions %>
+    <ul class="collection">
+      <% @questions.each do |question|%>
+        <li class="collection-item">
+          <div class="admin-question-content">
+            <div class="admin-question-image-frame">
+              <%= image_tag question.image.variant(:display), class: 'admin-question-image' if question.image.attached? %>
+            </div>
+            <span class="bold"><%= question.choice.text %></span>
+          </div>
+          <%= link_to "削除", question, data: { "turbo-method": :delete,
+                                                turbo_confirm: "本当に削除しますか？", },
+                                        class: 'waves-effect waves-light btn' %>
+        </li>
+      <% end %>
+    </ul>
+    <%= paginate @questions %>
+  </div>
+</div>
